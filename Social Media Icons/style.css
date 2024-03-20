@@ -1,0 +1,109 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, 
+body{
+    display: grid;
+    height: 100vh;
+    width: 100%;
+    font-family: "Poppins", sans-serif;
+    place-items: center;
+    background: linear-gradient(315deg, #8f3636, #d7e1ec);
+}
+
+.container{
+    display: inline-flex;
+}
+
+.icon{
+    position: relative;
+    height: 50px;
+    width: 50px;
+    background: #fff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 15px;
+    margin: 10px;
+    font-size: 18px;
+    box-shadow: 0 10px 10px rgb(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.tooltip{
+    position: absolute;
+    top: 0;
+    font-size: 14px;
+    background: #fff;
+    color: #ffffff;
+    padding: 5px 8px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    opacity: 0;
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.tooltip::before{
+    position: absolute;
+    height: 8px;
+    width: 8px;
+    content: "";
+    background: #fff;
+    bottom: -3px;
+    left: 50%;
+    transform: translate(-50%) rotate(45deg);
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.icon:hover .tooltip{
+    top: -45px;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.container .icon:hover span,
+.container .icon:hover .tooltip {
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.01);
+}
+
+.container .facebook:hover,
+.container .facebook:hover .tooltip,
+.container .facebook:hover .tooltip::before {
+    background: #3b5999;
+    color: #fff;
+}
+
+.container .twitter:hover,
+.container .twitter:hover .tooltip,
+.container .twitter:hover .tooltip::before {
+    background: #46c1f6;
+    color: #fff;
+}
+
+.container .instagram:hover,
+.container .instagram:hover .tooltip,
+.container .instagram:hover .tooltip::before {
+    background: #e1306c;
+    color: #fff;
+}
+
+.container .github:hover,
+.container .github:hover .tooltip,
+.container .github:hover .tooltip::before {
+    background: #333333;
+    color: #fff;
+}
+
+.container .youtube:hover,
+.container .youtube:hover .tooltip,
+.container .youtube:hover .tooltip::before {
+    background: #e92828;
+    color: #fff;
+}
