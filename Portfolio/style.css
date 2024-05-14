@@ -1,0 +1,333 @@
+@import url('https://fonts.googleapis.com/css2?family=Michroma&display=swap');
+
+*{
+    font-family: "Michroma", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+nav{
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 1520px;
+    height: 50px;
+    background-color: white;
+    z-index: 10000;
+    margin-top: 0px;
+    padding: 10px 0px;
+}
+
+.navRight{
+    margin-right: 20px;
+}
+
+.navRight a{
+     text-decoration: none;
+     color: black;
+     font-weight: bold;
+     margin-right: 15px;
+}
+
+.navRight a:hover{
+    color: #cc3632;
+    font-size: 17px;
+}
+
+.navRight button{
+    color: #cc3632;
+    border: 2px solid #cc3632;
+    border-radius: 25px;
+    padding: 10px;
+    font-weight: bold;
+}
+
+.navRight button:hover{
+    background-color: #cc3632;
+    color: white;
+    font-size: 15px;
+}
+
+.headings{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 90px;
+    animation: slideInFromRight 2s ease-in;
+}
+
+.avatar{
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    transition: opacity 1s ease-in-out;
+}
+
+.show-image{
+    opacity: 1;
+}
+
+.container{
+    display: inline-block;
+    margin-bottom: 0;
+}
+
+.box1{
+    height: 700px;
+    background-color: #cc3632;
+    color: white;
+    padding: 30px;
+    letter-spacing: 1px;
+    z-index: 0;
+}
+
+.box1 h1{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.box1 p{
+    display: block;
+    padding: 20px 250px;
+    padding-bottom: 100px;
+    text-align: center;
+    letter-spacing: 2px;
+}
+
+.seperation{
+    border: 2px solid rgb(107, 104, 104);
+    background-color: rgb(82, 82, 82);
+}
+
+.table{
+    display: flex;
+    z-index: 100;
+    background-color: white;
+    margin-left: 90px;
+    position: relative;
+    top: -350px;
+    height: 500px;
+    width: 1350px;
+    border-radius: 15px;
+}
+
+.tbox1{
+    border: 0.1px solid rgb(216, 212, 212);
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    height: 800px;
+    width: 450px;
+    box-shadow: 1px 2px rgb(125, 121, 121);
+}
+
+.img{
+    margin-left: 155px;
+    margin-top: 80px;
+    border: 2px solid rgb(243, 240, 240);
+    border-radius: 100%;
+    padding: 30px;
+    background-color: #00c6fe;
+}
+
+.tbox1 h1{
+    margin-left: 70px;
+    margin-top: 15px;
+    font-size: 25px;
+}
+
+.fp{
+    padding: 30px;
+    text-align: center;
+}
+
+.redc{
+    padding: 25px 90px;
+    padding-top: 50px;
+    color: #cc3632;
+}
+
+.sp{
+    padding: 25px 85px;
+    padding-top: 0px;
+}
+
+.tbox2{
+    border: 0.0001px solid rgb(216, 212, 212);
+    height: 800px;
+    width: 450px;
+    box-shadow: 1px 2px rgb(125, 121, 121);
+}
+
+.tbox2 h1{
+    font-size: 25px;
+    margin-left: 60px;
+    margin-top: 18px;
+}
+
+.tbox3{
+    border: 0.1px solid rgb(216, 212, 212);
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    height: 800px;
+    width: 450px;
+    box-shadow: 1px 2px rgb(125, 121, 121);
+}
+
+.tbox3 h1{
+    margin-left: 135px;
+    margin-top: 15px;
+    font-size: 25px;
+}
+
+@keyframes slideInFromRight {
+    0% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0%);
+    }
+}
+
+.container2{
+    display: flex;
+    justify-content: center;
+    background: #cc3632;
+    padding: 50px;
+}
+
+.icon{
+    position: relative;
+    height: 50px;
+    width: 50px;
+    background: #fff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 15px;
+    margin: 10px;
+    font-size: 18px;
+    box-shadow: 0 10px 10px rgb(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+.tooltip{
+    position: absolute;
+    top: 0;
+    font-size: 14px;
+    background: #fff;
+    color: #ffffff;
+    padding: 5px 8px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    opacity: 0;
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.tooltip::before{
+    position: absolute;
+    height: 8px;
+    width: 8px;
+    content: "";
+    background: #fff;
+    bottom: -3px;
+    left: 50%;
+    transform: translate(-50%) rotate(45deg);
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.icon:hover .tooltip{
+    top: -45px;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.container2 .icon:hover span,
+.container2 .icon:hover .tooltip {
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.01);
+}
+
+.container2 .linkedin:hover,
+.container2 .linkedin:hover .tooltip,
+.container2 .linkedin:hover .tooltip::before {
+    background: #3b5999;
+    color: #fff;
+}
+
+.container2 .twitter:hover,
+.container2 .twitter:hover .tooltip,
+.container2 .twitter:hover .tooltip::before {
+    background: #46c1f6;
+    color: #fff;
+}
+
+.container2 .instagram:hover,
+.container2 .instagram:hover .tooltip,
+.container2 .instagram:hover .tooltip::before {
+    background: #e1306c;
+    color: #fff;
+}
+
+.container2 .github:hover,
+.container2 .github:hover .tooltip,
+.container2 .github:hover .tooltip::before {
+    background: #333333;
+    color: #fff;
+}
+
+#page3{
+    width: 100%;
+    min-height: 100vh;
+}
+
+.projects h1{
+    padding: 50px;
+    color: #cc3632;
+}
+
+.project1{
+    width: 400px;
+    padding-top: 0px;
+    padding: 30px 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    text-decoration: underline;
+}
+
+.project1 video{
+    width: 500px;
+    border-radius: 15px;
+}
+
+.project2{
+    width: 400px;
+    padding-top: 0px;
+    padding: 30px 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin-left: 60vw;
+    text-decoration: underline;
+}
+
+.project2 video{
+    width: 500px;
+    border-radius: 15px;
+}
